@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🛸 UFO Appearance Prediction! 👽</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    
+</head>
+
+<body>
+
+   
+    <div class="grid">
+        <div class="box">
+            <h1>👽 UFO Encounter Prediction! 🛸</h1>
+
+            <p>Unravel the mysteries of UFO sightings based on seconds, latitude, and longitude. Are you ready to explore the unknown?</p>
+
+            <form action="{{ url_for('predict')}}" method="post">
+                <input type="number" name="seconds" placeholder="Spooky Seconds" required="required" min="0" max="60" />
+                <input type="text" name="latitude" placeholder="Eerie Latitude" required="required" />
+                <input type="text" name="longitude" placeholder="Cryptic Longitude" required="required" />
+                <button type="submit" class="btn">Summon UFO Predictions</button>
+            </form>
+
+            <p class="prediction">{{ prediction_text }}</p>
+
+            
+            <h2>Unidentified Flying Objects (UFOs)</h2>
+            <p class="text">UFOs, often associated with extraterrestrial life, are mysterious aerial phenomena that defy conventional explanation. Witnesses around the world have reported sightings of strange lights, unidentified aircraft, and bizarre encounters with beings not of this world.</p>
+            <p class="text">While many UFO sightings can be attributed to natural or human-made phenomena, some remain unexplained, fueling the fascination and speculation surrounding the possibility of alien visitation.</p>
+
+            
+            <div class="alien-headlines">
+                <p>👾 Aliens Among Us! 🛸</p>
+                <p>🛰️ Extraterrestrial Enigmas Unveiled! 👽</p>
+                <p>🌌 Beyond the Stars: Alien Mysteries Explored! 🚀</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+
+</html>
